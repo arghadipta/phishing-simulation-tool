@@ -131,9 +131,17 @@
                         <td>{{ target[1] }}</td>
                         <td>{{ target[0] }}</td>
                         <td>
-                            <span class="tracking-link">
-                                http://127.0.0.1:5000/track/{{ target[2] }}
-                            </span>
+                            <div style="display: flex; align-items: center; gap: 10px;">
+        <input type="text" 
+               value="{{ request.url_root }}track/{{ target[2] }}" 
+               readonly 
+               style="flex: 1; font-family: monospace; font-size: 12px; padding: 8px; border: 1px solid #ddd; border-radius: 4px; background: #f8f9fa;"
+               id="link-{{ loop.index }}">
+        <button onclick="copyLink({{ loop.index }})" 
+                style="padding: 8px 16px; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; white-space: nowrap;">
+            📋 Copy
+        </button>
+    </div>
                         </td>
                     </tr>
                     {% endfor %}
@@ -173,5 +181,23 @@
             {% endif %}
         </div>
     </div>
+    <script>
+        function copyLink(index) {
+            const input = document.getElementById('link-' + index);
+            input.select();
+            document.execCommand('copy');
+            
+            // Visual feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = '✅ Copied!';
+            button.style.background = '#229954';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = '#27ae60';
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
