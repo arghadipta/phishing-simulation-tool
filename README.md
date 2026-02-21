@@ -4,20 +4,9 @@ A full-stack web application for conducting security awareness training through 
 
 ## 🎯 Live Demo
 
-**[View Live Demo →](https://your-app-name.onrender.com)** *(Add your Render URL here after deployment)*
+**[View Live Demo →](https://your-app.onrender.com)** *(Coming soon)*
 
 > **Note:** The app may take 30-60 seconds to wake up from sleep on first visit (free tier limitation).
-
-## 📸 Screenshots
-
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
-
-### Campaign Analytics
-![Analytics](screenshots/analytics.png)
-
-### Phishing Page Example
-![Phishing](screenshots/phishing.png)
 
 ## ✨ Features
 
@@ -50,8 +39,8 @@ A full-stack web application for conducting security awareness training through 
 
 1. **Clone the repository**
 ```bash
-   git clone https://github.com/yourusername/phishing-simulator.git
-   cd phishing-simulator
+   git clone https://github.com/yourusername/phishing-simulation-tool.git
+   cd phishing-simulation-tool
 ```
 
 2. **Install dependencies**
@@ -104,10 +93,9 @@ The dashboard provides:
 
 ### Requirements:
 - ✅ Written authorization from organization leadership
-- ✅ Informed consent from participants (general security training notice)
-- ✅ Compliance with local, state, and federal laws
+- ✅ Informed consent from participants
+- ✅ Compliance with all applicable laws
 - ✅ Clear educational purpose
-- ✅ Privacy policy compliance
 
 ### Prohibited Uses:
 - ❌ Unauthorized testing
@@ -125,30 +113,28 @@ The dashboard provides:
 
 ## 🗂️ Project Structure
 ```
-phishing-simulator/
+phishing-simulation-tool/
 ├── app.py                          # Main Flask application
 ├── requirements.txt                # Python dependencies
-├── phishing.db                     # SQLite database (auto-created)
-├── templates/
-│   ├── home.html                  # Dashboard
-│   ├── create_campaign.html       # Campaign creation
-│   ├── campaign_detail.html       # Campaign analytics
-│   ├── education.html             # Educational feedback
-│   ├── email_templates.html       # Email template library
-│   ├── setup_guide.html          # Setup instructions
-│   ├── settings.html             # App settings
-│   ├── phishing_password_reset.html
-│   ├── phishing_package_delivery.html
-│   └── phishing_hr_document.html
-└── README.md
+├── README.md                       # Project documentation
+├── .gitignore                     # Git ignore rules
+└── templates/                     # HTML templates
+    ├── home.html
+    ├── create_campaign.html
+    ├── campaign_detail.html
+    ├── education.html
+    ├── email_templates.html
+    ├── setup_guide.html
+    ├── settings.html
+    └── phishing_*.html            # Phishing page templates
 ```
 
 ## 🎓 Learning Outcomes
 
 This project demonstrates:
 - Full-stack web development
-- RESTful routing
-- Database design and queries
+- RESTful routing with Flask
+- Database design and SQL queries
 - User session tracking
 - Security-focused development
 - Ethical considerations in cybersecurity
@@ -162,23 +148,16 @@ This project demonstrates:
 - [ ] More phishing templates
 - [ ] Multi-language support
 - [ ] Team collaboration features
-- [ ] Integration with SMTP servers
-
-## 📝 License
-
-This project is for educational purposes. Use responsibly and legally.
 
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: [@arghadipta](https://github.com/arghadipta)
+- LinkedIn:(https://linkedin.com/in/arghadipta)
 
 ## 🙏 Acknowledgments
 
-- Built as a cybersecurity educational project
-- Inspired by real-world phishing awareness training needs
-- Thanks to the Flask and Python communities
+Built as a cybersecurity educational project to address real-world phishing awareness training needs.
 
 ---
 
