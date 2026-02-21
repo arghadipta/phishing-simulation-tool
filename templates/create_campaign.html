@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Campaign</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        textarea {
+            font-family: monospace;
+            resize: vertical;
+        }
+        .btn {
+            padding: 14px 28px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #229954;
+        }
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Create New Campaign</h1>
+            <p style="color: #666; margin-top: 10px;">Set up a phishing simulation for your team</p>
+        </div>
+        
+        <div class="card">
+            <div class="info-box">
+                <strong>📋 Note:</strong> Always obtain proper authorization before conducting phishing simulations. 
+                This is for security training purposes only.
+            </div>
+            
+            <form method="POST" action="/create-campaign">
+                <div class="form-group">
+                    <label for="campaign_name">Campaign Name *</label>
+                    <input type="text" id="campaign_name" name="campaign_name" 
+                           placeholder="e.g., Q1 2024 Security Training" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="template">Select Template *</label>
+                    <select id="template" name="template" required>
+                        <option value="">Choose a template...</option>
+                        <option value="password_reset">Password Reset (Easy)</option>
+                        <option value="package_delivery">Package Delivery (Medium)</option>
+                        <option value="hr_document">HR Document (Medium)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="targets">Target Users *</label>
+                    <textarea id="targets" name="targets" rows="8" required
+                              placeholder="alice@company.com Alice Johnson&#10;bob@company.com Bob Smith&#10;charlie@company.com Charlie Davis"></textarea>
+                    <small style="color: #666;">Format: email@domain.com Name (one per line)</small>
+                </div>
+                
+                <button type="submit" class="btn">Create Campaign</button>
+                <a href="/" style="margin-left: 20px;">Cancel</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Setup Guide - Phishing Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .warning h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+        ol {
+            line-height: 2;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📖 Setup Guide</h1>
+            <p style="opacity: 0.9; margin-top: 10px;">Complete walkthrough for running phishing simulations</p>
+        </div>
+        
+        <div class="warning">
+            <h3>⚠️ Legal & Ethical Requirements</h3>
+            <p><strong>CRITICAL:</strong> Before conducting any phishing simulation, you MUST:</p>
+            <ul>
+                <li>Obtain written authorization from company leadership</li>
+                <li>Inform employees that security awareness training will occur (without revealing specifics)</li>
+                <li>Comply with all applicable laws and company policies</li>
+                <li>Use results for training purposes only, never for punishment</li>
+                <li>Protect employee privacy and data</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Quick Start (5 Minutes)</h2>
+            
+            <div class="step">
+                <h3>Step 1: Create a Campaign</h3>
+                <ol>
+                    <li>Click <strong>"Create New Campaign"</strong> on the dashboard</li>
+                    <li>Enter a campaign name (e.g., "Q1 2024 Security Training")</li>
+                    <li>Select a phishing template</li>
+                    <li>Add target users (format: <code>email@domain.com Name</code>)</li>
+                    <li>Click <strong>"Create Campaign"</strong></li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <h3>Step 2: Get Tracking Links</h3>
+                <ol>
+                    <li>You'll be redirected to the campaign detail page</li>
+                    <li>Each target has a unique tracking link</li>
+                    <li>These links are how you track who clicks</li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <h3>Step 3: Send Phishing Emails</h3>
+                <ol>
+                    <li>Go to <a href="/email-templates">Email Templates</a></li>
+                    <li>Copy the template matching your campaign</li>
+                    <li>Replace <code>[TRACKING_LINK]</code> with each person's unique link</li>
+                    <li>Send the emails to your targets</li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <h3>Step 4: Monitor Results</h3>
+                <ol>
+                    <li>Return to your campaign detail page</li>
+                    <li>Watch real-time statistics update</li>
+                    <li>See who clicked and who submitted credentials</li>
+                    <li>Review the activity timeline</li>
+                </ol>
+            </div>
+            
+            <div class="step">
+                <h3>Step 5: Follow Up with Training</h3>
+                <ol>
+                    <li>Schedule a training session within 1-2 weeks</li>
+                    <li>Share anonymized results with the team</li>
+                    <li>Review the red flags people missed</li>
+                    <li>Provide resources for improvement</li>
+                    <li>Recognize those who reported the phishing attempt</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Best Practices</h2>
+            <ul style="line-height: 2;">
+                <li><strong>Start Easy:</strong> Use easy templates first, increase difficulty over time</li>
+                <li><strong>Run Regularly:</strong> Quarterly campaigns maintain awareness</li>
+                <li><strong>Vary Templates:</strong> Don't use the same template repeatedly</li>
+                <li><strong>Timing Matters:</strong> Tuesday-Thursday mornings work best</li>
+                <li><strong>Avoid Stress Periods:</strong> Skip holidays, year-end, major projects</li>
+                <li><strong>Make it Educational:</strong> Focus on learning, not catching people</li>
+                <li><strong>Celebrate Success:</strong> Recognize those who report phishing</li>
+                <li><strong>Track Improvement:</strong> Compare campaigns over time</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>Understanding the Metrics</h2>
+            <p><strong>Click Rate:</strong> Percentage who clicked the phishing link</p>
+            <ul style="margin-left: 25px; line-height: 1.8;">
+                <li>Good: &lt; 10%</li>
+                <li>Needs Improvement: 10-30%</li>
+                <li>Critical: &gt; 30%</li>
+            </ul>
+            
+            <p style="margin-top: 20px;"><strong>Submit Rate:</strong> Percentage who entered credentials</p>
+            <ul style="margin-left: 25px; line-height: 1.8;">
+                <li>Good: &lt; 5%</li>
+                <li>Needs Improvement: 5-10%</li>
+                <li>Critical: &gt; 10%</li>
+            </ul>
+        </div>
+        
+        <div class="card" style="text-align: center;">
+            <h2>Need Help?</h2>
+            <p style="margin: 20px 0;">Check out these resources:</p>
+            <a href="/email-templates" style="margin: 0 10px;">📧 Email Templates</a>
+            <a href="/settings" style="margin: 0 10px;">⚙️ Settings</a>
+            <a href="/" style="margin: 0 10px;">🏠 Dashboard</a>
+        </div>
+        
+        <p style="text-align: center; margin-top: 30px;">
+            <a href="/">← Back to Dashboard</a>
+        </p>
+    </div>
+</body>
+</html>

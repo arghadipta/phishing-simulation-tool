@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Templates - Phishing Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .template-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        .template-box h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .email-content {
+            background: white;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            margin: 15px 0;
+        }
+        .copy-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .copy-btn:hover {
+            background: #229954;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .badge-easy { background: #d4edda; color: #155724; }
+        .badge-medium { background: #fff3cd; color: #856404; }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📧 Email Templates</h1>
+            <p style="color: #666; margin-top: 10px;">Copy and paste these templates to send phishing simulations</p>
+            <p><a href="/">← Back to Dashboard</a></p>
+        </div>
+        
+        <div class="card">
+            <p style="background: #fff3cd; padding: 15px; border-radius: 4px; border-left: 4px solid #ffc107;">
+                <strong>⚠️ Important:</strong> Replace <code>[TRACKING_LINK]</code> with the actual tracking link 
+                from your campaign detail page before sending!
+            </p>
+        </div>
+        
+        <div class="template-box">
+            <h3>Password Reset <span class="badge badge-easy">Easy</span></h3>
+            <p><strong>Subject:</strong> Urgent: Password Reset Required</p>
+            <div class="email-content">From: IT Security &lt;noreply@company-security.com&gt;
+To: [Recipient]
+Subject: Urgent: Password Reset Required
+
+Dear Employee,
+
+Your password will expire in 24 hours due to our new security policy. To avoid account lockout, please reset your password immediately by clicking the link below:
+
+[TRACKING_LINK]
+
+Failure to reset within 24 hours will result in temporary account suspension.
+
+Thank you,
+IT Security Team</div>
+            <button class="copy-btn" onclick="copyTemplate(this)">📋 Copy Template</button>
+        </div>
+        
+        <div class="template-box">
+            <h3>Package Delivery <span class="badge badge-medium">Medium</span></h3>
+            <p><strong>Subject:</strong> Package Delivery Attempt Failed</p>
+            <div class="email-content">From: Shipping Notification &lt;delivery@fastship-track.com&gt;
+To: [Recipient]
+Subject: Package Delivery Attempt Failed
+
+Hello,
+
+We attempted to deliver your package today but no one was available to receive it. Your package contains:
+
+- Order #87453-2819
+- Delivery Date: Today
+
+To reschedule delivery or view package details, please click below:
+
+[TRACKING_LINK]
+
+Your package will be returned if not claimed within 48 hours.
+
+FastShip Logistics
+Tracking Support</div>
+            <button class="copy-btn" onclick="copyTemplate(this)">📋 Copy Template</button>
+        </div>
+        
+        <div class="template-box">
+            <h3>HR Document Review <span class="badge badge-medium">Medium</span></h3>
+            <p><strong>Subject:</strong> Action Required: Review Updated Employee Handbook</p>
+            <div class="email-content">From: Human Resources &lt;hr@company.com&gt;
+To: [Recipient]
+Subject: Action Required: Review Updated Employee Handbook
+
+Dear Team Member,
+
+We have updated our Employee Handbook with important policy changes effective immediately. All employees must review and acknowledge the changes by end of business Friday.
+
+[TRACKING_LINK]
+
+Key updates include:
+- Remote work policy
+- Benefits enrollment
+- Code of conduct
+
+Failure to acknowledge may affect your benefits enrollment.
+
+Best regards,
+HR Department</div>
+            <button class="copy-btn" onclick="copyTemplate(this)">📋 Copy Template</button>
+        </div>
+        
+        <div class="card">
+            <h2>How to Use These Templates</h2>
+            <ol style="line-height: 2; color: #333;">
+                <li>Create a campaign in the dashboard</li>
+                <li>Go to the campaign detail page to see tracking links</li>
+                <li>Copy an email template above</li>
+                <li>Replace <code>[TRACKING_LINK]</code> with the actual link for each target</li>
+                <li>Send the email to your target users</li>
+                <li>Monitor results in the campaign dashboard</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script>
+        function copyTemplate(button) {
+            const template = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(template).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✅ Copied!';
+                button.style.background = '#27ae60';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
