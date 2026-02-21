@@ -4,7 +4,7 @@ A full-stack web application for conducting security awareness training through 
 
 ## 🎯 Live Demo
 
-**[View Live Demo →](https://your-app.onrender.com)** *(Coming soon)*
+**[View Live Demo →](https://phishing-simulator-nnuc.onrender.com/)**
 
 > **Note:** The app may take 30-60 seconds to wake up from sleep on first visit (free tier limitation).
 
